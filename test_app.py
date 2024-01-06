@@ -10,5 +10,5 @@ url = "https://docs.google.com/spreadsheets/d/1vXaglvGGbGN0pc8vEjiA7bCPpPTacFxvL
 # こっちでModuleNotFoundError: No module named 'streamlit_gsheets'が発生
 conn = st.connection("gsheets", type=GSheetsConnection) 
 
-data = conn.read(spreadsheet=url,index_col=0,header=[0,])
+data = conn.read(spreadsheet=url,index_col=0,header=[0,1])
 st.dataframe(data)
